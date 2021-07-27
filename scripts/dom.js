@@ -2,7 +2,7 @@ const UNCOMPLETED_LIST_SHELF_ID = "incompleteBookshelfList";
 const COMPLETED_LIST_SHELF_ID = "completeBookshelfList";
 const SHELF_ITEMID = "itemId";
 
-// input user
+// Input book
 function addShelf() {
     const unCompletedShelfId = document.getElementById(UNCOMPLETED_LIST_SHELF_ID);
     const completeBookShelfList = document.getElementById(COMPLETED_LIST_SHELF_ID);
@@ -11,7 +11,7 @@ function addShelf() {
     const bookAuthor = document.getElementById("inputBookAuthor").value;
     const bookYear = document.getElementById("inputBookYear").value;
 
-    // checkbox
+    // Check Box
     const checkbox = document.getElementById("inputBookIsComplete");
 
     let shelf = "";
@@ -31,7 +31,7 @@ function addShelf() {
 }
 
 
-// make element
+// Make element
 function makeShelf(dataTitle, dataAuthor, dataYear, isCompleted) {
 
     const bookTitle = document.createElement("h3");
@@ -59,7 +59,7 @@ function makeShelf(dataTitle, dataAuthor, dataYear, isCompleted) {
 }   
 
 
-// checkbox
+// Check Box
 function checkbox() {
 
     const checkbox = document.getElementById("inputBookIsComplete");
@@ -73,7 +73,7 @@ function checkbox() {
 }
 
 
-// create button for all
+// Button for all
 function createButton(buttonTypeClass, textButton, eventListener) {
     const button = document.createElement("button");
     button.classList.add(buttonTypeClass);
@@ -87,7 +87,7 @@ function createButton(buttonTypeClass, textButton, eventListener) {
 }
 
 
-// create checkButton
+// Check Button
 function createCheckButton() {
     return createButton("dibaca", "Selesai dibaca", function(event){
         addTaskToCompleted(event.target.parentElement);
@@ -112,7 +112,7 @@ function addTaskToCompleted(taskElement) {
 }
 
 
-// create Trash Button
+// Button hapus
 function createTrashButton() {
     return createButton("hapus", "Hapus Buku", function(event){
         removeTaskFromCompleted(event.target.parentElement);
@@ -128,7 +128,7 @@ function removeTaskFromCompleted(taskElement) {
 }
 
 
-// create Undo Button
+// Undo button
 function createUndoButton() {
     return createButton("dibaca", "Belum Selesai dibaca", function(event){
         undoTaskFromCompleted(event.target.parentElement);
@@ -151,7 +151,7 @@ function undoTaskFromCompleted(taskElement){
     updateDataToStorage();
 }
 
-// search 
+// Search 
 const searchBook = document.getElementById("searchSubmit");
     searchBook.addEventListener("click", () => {
 
