@@ -89,7 +89,7 @@ function createButton(buttonTypeClass, textButton, eventListener) {
 
 // create checkButton
 function createCheckButton() {
-    return createButton("green", "Selesai dibaca", function(event){
+    return createButton("dibaca", "Selesai dibaca", function(event){
         addTaskToCompleted(event.target.parentElement);
     })
 }
@@ -114,7 +114,7 @@ function addTaskToCompleted(taskElement) {
 
 // create Trash Button
 function createTrashButton() {
-    return createButton("red", "Hapus Buku", function(event){
+    return createButton("hapus", "Hapus Buku", function(event){
         removeTaskFromCompleted(event.target.parentElement);
     })
 }
@@ -130,7 +130,7 @@ function removeTaskFromCompleted(taskElement) {
 
 // create Undo Button
 function createUndoButton() {
-    return createButton("green", "Belum Selesai dibaca", function(event){
+    return createButton("dibaca", "Belum Selesai dibaca", function(event){
         undoTaskFromCompleted(event.target.parentElement);
     });
 }
@@ -150,3 +150,23 @@ function undoTaskFromCompleted(taskElement){
     taskElement.remove();
     updateDataToStorage();
 }
+
+// search 
+const searchBook = document.getElementById("searchSubmit");
+    searchBook.addEventListener("click", () => {
+
+        event.preventDefault();
+
+        const searchJudul = document.getElementById("searchBookTitle").value.toLowerCase();
+        const textSearch = document.querySelectorAll("article");
+
+        for (book of textSearch) {
+            const Judul = book.firstElementChild.textContent.toLowerCase();
+
+                if (Judul.indexOf(searchJudul) != -1) {
+                    book.style.display = "block";
+                } else {
+                    book.style.display = "none";
+                }
+        }
+    });

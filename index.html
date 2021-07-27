@@ -6,28 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bookshelf Apps</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="head_bar">
-        <h1 class="head_bar__title">Bookshelf Apps</h1>
+        <h1 class="head_bar__title">• Bookshelf Apps •</h1>
     </header>
 <main>
     <section class="input_section">
         <h2>Masukkan Buku Baru</h2>
         <form id="inputBook">
             <div class="input">
-                <label for="inputBookTitle">Judul</label>
-                <input id="inputBookTitle" type="text" required>
+                <label for="inputBookTitle">Judul:</label>
+                <input id="inputBookTitle" placeholder="Judul buku..." type="text" required>
             </div>
             <div class="input">
-                <label for="inputBookAuthor">Penulis</label>
-                <input id="inputBookAuthor" type="text" required>
+                <label for="inputBookAuthor">Penulis:</label>
+                <input id="inputBookAuthor" placeholder="Nama penulis..." type="text" required>
             </div>
             <div class="input">
-                <label for="inputBookYear">Tahun</label>
-                <input id="inputBookYear" type="number" required>
+                <label for="inputBookYear">Tahun:</label>
+                <input id="inputBookYear" placeholder="Tahun terbit..." type="number" required>
             </div>
             <div class="input_inline">
                 <label for="inputBookIsComplete">Selesai dibaca</label>
@@ -38,10 +37,10 @@
     </section>
 
     <section class="search_section">
-        <h2>Cari Buku (Opsional)</h2>
+        <h2>Cari Buku</h2>
         <form id="searchBook">
-            <label for="searchBookTitle">Judul</label>
-            <input id="searchBookTitle" type="text">
+            <label for="searchBookTitle">Judul:</label>
+            <input id="searchBookTitle" placeholder="Judul buku yang dicari..." type="text">
             <button id="searchSubmit" type="submit">Cari</button>
         </form>
     </section>

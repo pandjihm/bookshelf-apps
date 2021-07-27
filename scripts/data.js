@@ -2,7 +2,7 @@
 const STORAGE_KEY = "SHELF_APPS";
 let shelfs = [];
 
-function isStorageExist() /* boolean */ {
+function isStorageExist() {
     if(typeof(Storage) === undefined){
         alert("Browser kamu tidak mendukung local storage");
         return false
@@ -19,10 +19,8 @@ function saveData() {
 function loadDataFromStorage() {
     const serializedData = localStorage.getItem(STORAGE_KEY);
     let data = JSON.parse(serializedData);
-
     if(data !== null)
         shelfs = data;
-
     document.dispatchEvent(new Event("ondataloaded"));
 }
 
