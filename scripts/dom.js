@@ -73,7 +73,7 @@ function checkbox() {
 }
 
 
-// Button for all
+// All Button
 function createButton(buttonTypeClass, textButton, eventListener) {
     const button = document.createElement("button");
     button.classList.add(buttonTypeClass);
@@ -128,7 +128,7 @@ function removeTaskFromCompleted(taskElement) {
 }
 
 
-// Undo button
+// Button dibaca
 function createUndoButton() {
     return createButton("dibaca", "Belum Selesai dibaca", function(event){
         undoTaskFromCompleted(event.target.parentElement);

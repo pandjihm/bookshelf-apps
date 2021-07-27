@@ -18,4 +18,3 @@ document.addEventListener("ondatasaved", () => {
 document.addEventListener("ondataloaded", () => {
     refreshDataFromShelf();
 });
-
