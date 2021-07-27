@@ -153,6 +153,24 @@ main {
     margin: 8px 0;
 }
 
+button {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.green {
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.red {
+    background-color: darkred;
+    cursor: pointer;
+    color: white;
+}
+
 .book_shelf > .book_list > .book_item > .action > button {
     border: 0;
     padding: 5px;
